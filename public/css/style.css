@@ -10,6 +10,9 @@ body{
     min-height: 100vh;
 }
 
+p{
+    line-height: 1.8;
+}
 .main-content{
     flex-grow: 1;
 }
