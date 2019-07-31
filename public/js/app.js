@@ -30,7 +30,8 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = '';
     //console.log(search.value);
 
-    fetch('http://52.168.77.89:3000/weather?address='+location).then((response) => {
+//    fetch('http://52.168.77.89:3000/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
         response.json().then( (data) => {
             if(data.error){
                 //console.log(data.error);
