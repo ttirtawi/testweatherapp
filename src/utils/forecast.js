@@ -8,9 +8,7 @@ const forecast = (latitude, longitude , callback) => {
         } else if (body.error){
             callback('Unable to get forecast, please check other location', undefined);
         } else{
-            callback(undefined, {
-                summary: body.daily.summary
-            })
+            callback(undefined, { summary: body.daily.summary + 'The high temp is ' + body.daily.data[0].temperatureHigh + ', the low temp is '+ body.daily.data[0].temperatureLow + '.' })
         }
     })
 
